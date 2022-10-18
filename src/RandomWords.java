@@ -61,7 +61,7 @@ public class RandomWords {
             System.out.print("Please enter a letter: ");
             userLetter = scanner.nextLine();
             while (!userLetter.matches("[a-zA-Z]")){
-                System.out.println("Input letters only, don't break my game Pedro ლ(ಠ益ಠლ) !");
+                System.out.println("Input letters only, and one letter at the time, don't break my game Pedro ლ(ಠ益ಠლ) !");
                 System.out.println("Enter a letter");
                 userLetter = scanner.nextLine();
             }
