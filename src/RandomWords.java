@@ -37,11 +37,15 @@ public class RandomWords {
         String userLetter = "";
         ArrayList<Character> guessedLetters = new ArrayList<>();
 
+
+       // For making the dashes in our secret word so the values are not null/empty
         char[] guessWord = new char[word.length()];
         for (int i = 0; i < word.length(); i++){
             guessWord[i] = '-';
         }
 
+       // For inputing the letters into ArrayList of chars and comparing later
+       // on if user input !contain those letters and gettin wrong count
 
         ArrayList<Character> secretWord = new ArrayList<>();
         for (int i = 0; i < word.length(); i++){
@@ -57,8 +61,13 @@ public class RandomWords {
         do {
             System.out.println("You have: " + (maxGuess - counterWrong) + " lives left");
             System.out.print("Please enter a letter: ");
-
             userLetter = scanner.nextLine();
+            while (!userLetter.matches("[a-zA-Z]")){
+                System.out.println("Input letters only, don't break my game Pedro ლ(ಠ益ಠლ) !");
+                System.out.println("Enter a letter");
+                userLetter = scanner.nextLine();
+            }
+
             userLetter = userLetter.toLowerCase();
 
             if (guessedLetters.contains(userLetter.charAt(0))) {
@@ -88,12 +97,12 @@ public class RandomWords {
                                      "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(guessWord);
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
 
                     break;
 
                 case 2:
-
                     System.out.print("------------| \n" +
                                     " |        (ಠ_ಠ) \n" +
                                     " |          | \n" +
@@ -102,8 +111,8 @@ public class RandomWords {
                                     "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(guessWord);
-
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
                     break;
                 case 3:
 
@@ -115,8 +124,8 @@ public class RandomWords {
                                     "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(guessWord);
-
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
                     break;
 
                 case 4:
@@ -128,8 +137,8 @@ public class RandomWords {
                                     "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(guessWord);
-
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
                     break;
 
                 case 5:
@@ -141,10 +150,9 @@ public class RandomWords {
                                     "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(guessWord);
-
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
                     break;
-
 
                 case 6:
 
@@ -168,12 +176,11 @@ public class RandomWords {
                                      " | \n" +
                                      "_|_ \n");
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(guessWord));
-
+                    System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
+                            .replace("]",""));
                     break;
             }
         }while (counterCorrect < word.length() && counterWrong < maxGuess) ;
-
     }
 
 }
