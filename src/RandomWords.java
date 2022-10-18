@@ -52,8 +52,6 @@ public class RandomWords {
             secretWord.add(word.charAt(i));
         }
 
-
-
         int counterCorrect = 0;
         int counterWrong = 0;
         int maxGuess = 6;
@@ -90,7 +88,7 @@ public class RandomWords {
 
                 case 1:
                     System.out.print("------------| \n" +
-                                     " |        (ಠ_ಠ) \n" +
+                                     " |       <(ಠ_ಠ)> \n" +
                                      " |            \n" +
                                      " |            \n" +
                                      " |            \n" +
@@ -104,7 +102,7 @@ public class RandomWords {
 
                 case 2:
                     System.out.print("------------| \n" +
-                                    " |        (ಠ_ಠ) \n" +
+                                    " |       <(ಠ_ಠ)> \n" +
                                     " |          | \n" +
                                     " |          |  \n" +
                                     " |            \n" +
@@ -117,7 +115,7 @@ public class RandomWords {
                 case 3:
 
                     System.out.print("------------| \n" +
-                                    " |        (ಠ_ಠ) \n" +
+                                    " |       <(ಠ_ಠ)> \n" +
                                     " |         /|  \n" +
                                     " |          |  \n" +
                                     " |            \n" +
@@ -130,7 +128,7 @@ public class RandomWords {
 
                 case 4:
                     System.out.print("------------| \n" +
-                                    " |        (ಠ_ಠ) \n" +
+                                    " |       <(ಠ_ಠ)> \n" +
                                     " |         /|\\  \n" +
                                     " |          |  \n" +
                                     " |            \n" +
@@ -143,13 +141,14 @@ public class RandomWords {
 
                 case 5:
                     System.out.print("------------| \n" +
-                                    " |        (ಠ_ಠ) \n" +
+                                    " |       <(ಠ_ಠ)> \n" +
                                     " |         /|\\  \n" +
                                     " |          |  \n" +
                                     " |         /  \n" +
                                     "_|_           \n");
 
                     System.out.println("• Guess the word •");
+                    System.out.println("The end draws near !");
                     System.out.println(Arrays.toString(guessWord).replace(',',' ').replace("[","")
                             .replace("]",""));
                     break;
@@ -157,7 +156,7 @@ public class RandomWords {
                 case 6:
 
                     System.out.print("------------| \n" +
-                                    " |        (x_x) \n" +
+                                    " |       <(x_x)> \n" +
                                     " |         /|\\  \n" +
                                     " |          |  \n" +
                                     " |         / \\ \n" +
