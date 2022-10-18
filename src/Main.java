@@ -12,7 +12,8 @@ public class Main {
     randomWords.playingField(generatedWord);
     randomWords.gameOn(generatedWord);
 
-
+    //Make another class with game rules so that class random words is only for words
+    // connect all the logic
 
 
     }
