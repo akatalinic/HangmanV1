@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RandomWords {
+public class PlayerMenu {
 
     Words newWords = new Words();
     private String randomGeneratedWord;
