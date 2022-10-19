@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class RandomWords {
 
@@ -12,16 +12,62 @@ public class RandomWords {
             "cultured", "yummy", "heat", "cent", "female", "apparatus", "second", "tawdry", "heavy", "person", "field", "story",
             "zoom", "experience", "car", "realize", "overjoyed", "amused", "noiseless", "squalid", "happen"};
 
+    private String [] randomCountry = {"croatia", "portugal","slovakia","czechia","france","spain","italy","china","ukraine",
+    "england","scotland","norway","finland","sweden","turkey"};
+
+    private String [] animals = {"dog","cat","cow","dolphin","platypus","lion","tiger","bear","monkey","shark","kangaroo",
+    "mouse","pigeon","moose"};
 
     private String randomGeneratedWord;
 
     public String generateWord() {
+        Scanner scanner = new Scanner(System.in);
+        int userChoice;
+        boolean checkLogic = true;
 
-        String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
+        System.out.println("Please choose a word category: \n" +
+                                "1. Random Words (hard) \n" +
+                                "2. Country \n" +
+                                "3. Animals");
 
-        setRandomGeneratedWord(generateWord);
+        userChoice = scanner.nextInt();
 
-        return generateWord;
+       do {
+        switch (userChoice){
+
+            case 1:
+
+                String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
+                setRandomGeneratedWord(generateWord);
+                checkLogic = false;
+                break;
+
+            case 2:
+
+                String generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
+                setRandomGeneratedWord(generateWordCountry);
+                checkLogic = false;
+                break;
+
+            case 3:
+
+                String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
+                setRandomGeneratedWord(generateWordAnimal);
+                checkLogic = false;
+                break;
+
+            default:
+
+                System.out.println("Wrong input, please enter the numbers from 1-3");
+                System.out.println("Please choose a word category: \n" +
+                        "1. Random Words (hard) \n" +
+                        "2. Country \n" +
+                        "3. Animals");
+                userChoice = scanner.nextInt();
+                break;
+        }
+       } while (checkLogic);
+        return getRandomGeneratedWord();
     }
 
     public String getRandomGeneratedWord() {

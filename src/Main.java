@@ -5,7 +5,7 @@ public class Main {
         Game game = new Game ();
 
         game.initializeGame(randomWords.generateWord());
-//      System.out.println("THIS IS JUST FOR TESTING:" + randomWords.getRandomGeneratedWord());
+        System.out.println("THIS IS JUST FOR TESTING:" + randomWords.getRandomGeneratedWord());
         game.gameOn(randomWords.getRandomGeneratedWord());
 
     }

@@ -58,7 +58,7 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         setRandomWord(word);
 
-        String userLetter = "";
+        String userLetter;
         ArrayList<Character> guessedLetters = new ArrayList<>();
 
 
@@ -77,10 +77,12 @@ public class Game {
             secretWord.add(word.charAt(i));
         }
 
-
         int counterCorrect = 0;
         int counterWrong = 0;
         int maxGuess = 6;
+
+
+        // Main part of the game is below
 
         do {
             System.out.println("You have: " + (maxGuess - counterWrong) + " lives left");
@@ -104,7 +106,6 @@ public class Game {
                         setRandomWordToChar(guessWord);
                         counterCorrect++;
                         setCounterCorrect(counterCorrect);
-
                     }
                 }
 
@@ -113,12 +114,14 @@ public class Game {
                     setCounterWrong(counterWrong);
                 }
             }
-            Collections.sort(guessedLetters);
-            hangMan();
-        if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
-            System.out.println("You inputted following letters: ");
-            System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
+            Collections.sort(guessedLetters);   // sorts all the guessed letters in order
+            hangMan(); // prints hangman method depending on the wrongcounter
+
+            if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
+                System.out.println("You inputted following letters: ");
+                System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
             }
+
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);
     }
 
@@ -325,7 +328,6 @@ public class Game {
                     System.out.println("You have been hanged !");
                     System.out.print("The word was: " + randomWord);
                 }
-
                 break;
 
             default:
