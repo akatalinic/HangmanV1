@@ -116,7 +116,7 @@ public class Game {
             Collections.sort(guessedLetters);
             hangMan();
         if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
-            System.out.println("You inputed following letters: ");
+            System.out.println("You inputted following letters: ");
             System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
             }
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);
@@ -198,7 +198,7 @@ public class Game {
                     System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
                     System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                    System.out.print(" Thanks for saving me \n" +
+                    System.out.print(" Thanks for saving me! \n" +
                             "        ヽ(´▽`)ノ \n" +
                             "           | | \n" +
                             "           |_| \n" +
@@ -231,7 +231,7 @@ public class Game {
                     System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
                     System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                    System.out.print(" Thanks for saving me \n" +
+                    System.out.print(" Thanks for saving me! \n" +
                             "        ヽ(´▽`)ノ \n" +
                             "           | | \n" +
                             "           |_| \n" +
@@ -268,7 +268,7 @@ public class Game {
                     System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
                     System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                    System.out.print(" Thanks for saving me \n" +
+                    System.out.print(" Thanks for saving me! \n" +
                             "        ヽ(´▽`)ノ \n" +
                             "           | | \n" +
                             "           |_| \n" +
@@ -302,7 +302,7 @@ public class Game {
                     System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
                     System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                    System.out.print(" Thanks for saving me \n" +
+                    System.out.print(" Thanks for saving me! \n" +
                             "        ヽ(´▽`)ノ \n" +
                             "           | | \n" +
                             "           |_| \n" +
@@ -335,7 +335,7 @@ public class Game {
                     System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
                     System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                    System.out.print(" Thanks for saving me \n" +
+                    System.out.print(" Thanks for saving me! \n" +
                             "        ヽ(´▽`)ノ \n" +
                             "           | | \n" +
                             "           |_| \n" +
