@@ -90,7 +90,7 @@ public class Game {
             userLetter = scanner.nextLine();
             while (!userLetter.matches("[a-zA-Z]")) {
                 System.out.println("Input letters only, and one letter at the time, don't break my game Pedro ლ(ಠ益ಠლ) !");
-                System.out.print("Enter a letter");
+                System.out.print("Enter a letter: ");
                 userLetter = scanner.nextLine();
             }
 
@@ -121,7 +121,6 @@ public class Game {
                 System.out.println("You inputted following letters: ");
                 System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
             }
-
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);
     }
 

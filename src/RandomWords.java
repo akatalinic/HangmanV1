@@ -26,7 +26,7 @@ public class RandomWords {
         boolean checkLogic = true;
 
         System.out.println("Please choose a word category: \n" +
-                                "1. Random Words (hard) \n" +
+                                "1. Random Words (HARD) \n" +
                                 "2. Country \n" +
                                 "3. Animals");
 
