@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Game {
@@ -47,7 +48,7 @@ public class Game {
 
     public void initializeGame(String word) {
         for (int i = 0; i < word.length(); i++) {
-            System.out.print("- ");
+            System.out.print("_ ");
         }
         System.out.println();
     }
@@ -64,7 +65,7 @@ public class Game {
         // For making the dashes in our secret word so the values are not null/empty
         char[] guessWord = new char[word.length()];
         for (int i = 0; i < word.length(); i++) {
-            guessWord[i] = '-';
+            guessWord[i] = '_';
             setRandomWordToChar(guessWord);
         }
 
@@ -76,6 +77,7 @@ public class Game {
             secretWord.add(word.charAt(i));
         }
 
+
         int counterCorrect = 0;
         int counterWrong = 0;
         int maxGuess = 6;
@@ -86,7 +88,7 @@ public class Game {
             userLetter = scanner.nextLine();
             while (!userLetter.matches("[a-zA-Z]")) {
                 System.out.println("Input letters only, and one letter at the time, don't break my game Pedro ლ(ಠ益ಠლ) !");
-                System.out.println("Enter a letter");
+                System.out.print("Enter a letter");
                 userLetter = scanner.nextLine();
             }
 
@@ -111,7 +113,12 @@ public class Game {
                     setCounterWrong(counterWrong);
                 }
             }
+            Collections.sort(guessedLetters);
             hangMan();
+        if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
+            System.out.println("You inputed following letters: ");
+            System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
+            }
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);
     }
 
@@ -134,7 +141,7 @@ public class Game {
                             "         _/   \\_ \n" +
                             "           \n");
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -147,7 +154,7 @@ public class Game {
                             "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
                 }
                 break;
@@ -166,7 +173,7 @@ public class Game {
                             "         _/   \\_ \n" +
                             "           \n");
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -179,7 +186,7 @@ public class Game {
                             "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
                 }
                 break;
@@ -199,7 +206,7 @@ public class Game {
                             "           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -212,7 +219,7 @@ public class Game {
                             "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
                 }
                 break;
@@ -232,7 +239,7 @@ public class Game {
                             "           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
 
@@ -246,7 +253,7 @@ public class Game {
                             "_|_           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
 
@@ -269,7 +276,7 @@ public class Game {
                             "           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -283,7 +290,7 @@ public class Game {
 
                     System.out.println("• Guess the word •");
                     System.out.println("The end draws near !");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
                 }
                 break;
@@ -303,7 +310,7 @@ public class Game {
                             "           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -336,7 +343,7 @@ public class Game {
                             "           \n");
 
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 } else {
@@ -348,7 +355,7 @@ public class Game {
                             " | \n" +
                             "_|_ \n");
                     System.out.println("• Guess the word •");
-                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(',', ' ').replace("[", "")
+                    System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
                             .replace("]", ""));
 
                 }
