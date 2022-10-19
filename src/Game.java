@@ -118,7 +118,7 @@ public class Game {
             hangMan(); // prints hangman method depending on the wrongcounter
 
             if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
-                System.out.println("You inputted following letters: ");
+                System.out.print("You inputted following letters: ");
                 System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
             }
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);

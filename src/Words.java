@@ -17,8 +17,8 @@ public class Words {
     private String [] randomCountry = {"croatia", "portugal","slovakia","czechia","france","spain","italy","china","ukraine",
             "england","scotland","norway","finland","sweden","turkey"};
 
-    private String [] animals = {"dog","cat","cow","dolphin","platypus","lion","tiger","bear","monkey","shark","kangaroo",
-            "mouse","pigeon","moose"};
+    private String [] animals = {"dog","cat","cow","dolphin","platypus","tiger","monkey","shark","kangaroo",
+            "mouse","pigeon","moose","dingo","narwhal"};
 
     private int maxLength;
     private int minLength;
@@ -90,21 +90,29 @@ public class Words {
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
                     wordsLength = scanner.nextInt();
-                  while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
+                    while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
                         wordsLength = scanner.nextInt();
                     }
 
-                  String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
 
-                  while (generateWord.length() != wordsLength){
-                         generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
-                  }
+                    for (String word : getRandomWords()) {
+                        if (wordsLength == word.length()) {
 
-                    setRandomGeneratedWord(generateWord);
-                    checkLogic = false;
-                    break;
+
+                            String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
+
+                            while (generateWord.length() != wordsLength) {
+                                generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
+                            }
+
+                            setRandomGeneratedWord(generateWord);
+                            checkLogic = false;
+                            break;
+                        }
+                    }
+                    System.out.println("There is no word with that amount of letters");
 
                 case "2":
 
@@ -122,16 +130,20 @@ public class Words {
                         wordsLength = scanner.nextInt();
                     }
 
+                    for (String word : getRandomCountry()) {
+                        if (wordsLength == word.length()) {
 
-                    String generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
+                            String generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
 
-                    while( generateWordCountry.length() != wordsLength){
-                        generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
+                            while (generateWordCountry.length() != wordsLength) {
+                                generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
+                            }
+                            setRandomGeneratedWord(generateWordCountry);
+                            checkLogic = false;
+                            break;
+                        }
                     }
-
-                    setRandomGeneratedWord(generateWordCountry);
-                    checkLogic = false;
-                    break;
+                    System.out.println("There is no word with that amount of letters");
 
                 case "3":
 
@@ -151,15 +163,21 @@ public class Words {
 
                     }
 
-                    String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
+                    for (String word : getAnimals()){
+                        if(wordsLength == word.length()){
 
-                    while(generateWordAnimal.length() != wordsLength){
-                        generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
-                    }
+                            String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
+
+                            while (generateWordAnimal.length() != wordsLength) {
+                                generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
+                            }
 
                     setRandomGeneratedWord(generateWordAnimal);
                     checkLogic = false;
                     break;
+                        }
+                    }
+                    System.out.println("There is no word with that amount of letters");
             }
         } while (checkLogic);
         return getRandomGeneratedWord();

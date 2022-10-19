@@ -5,7 +5,6 @@ public class PlayerMenu {
     Words newWords = new Words();
     private String randomGeneratedWord;
 
-
     public String getRandomGeneratedWord() {
         return randomGeneratedWord;
     }
@@ -19,9 +18,9 @@ public class PlayerMenu {
         String userChoice;
 
         System.out.println("Please choose a word category: \n" +
-                                "1. Random Words (HARD) \n" +
-                                "2. Country \n" +
-                                "3. Animals");
+                "1. Random Words (HARD) \n" +
+                "2. Country \n" +
+                "3. Animals");
 
         userChoice = scanner.nextLine();
 
@@ -39,6 +38,5 @@ public class PlayerMenu {
 
         return  getRandomGeneratedWord();
     }
-
 
 }
