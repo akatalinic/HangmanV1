@@ -22,7 +22,7 @@ public class RandomWords {
 
     public String generateWord() {
         Scanner scanner = new Scanner(System.in);
-        int userChoice;
+        String userChoice;
         boolean checkLogic = true;
 
         System.out.println("Please choose a word category: \n" +
@@ -30,40 +30,39 @@ public class RandomWords {
                                 "2. Country \n" +
                                 "3. Animals");
 
-        userChoice = scanner.nextInt();
+        userChoice = scanner.nextLine();
+
+        while(!userChoice.matches("[1-3]")){
+            System.out.println("Wrong input, try again");
+            System.out.println("Please choose a word category: \n" +
+                    "1. Random Words (hard) \n" +
+                    "2. Country \n" +
+                    "3. Animals");
+            userChoice = scanner.nextLine();
+        }
 
        do {
         switch (userChoice){
 
-            case 1:
+            case "1":
 
                 String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
                 setRandomGeneratedWord(generateWord);
                 checkLogic = false;
                 break;
 
-            case 2:
+            case "2":
 
                 String generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
                 setRandomGeneratedWord(generateWordCountry);
                 checkLogic = false;
                 break;
 
-            case 3:
+            case "3":
 
                 String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
                 setRandomGeneratedWord(generateWordAnimal);
                 checkLogic = false;
-                break;
-
-            default:
-
-                System.out.println("Wrong input, please enter the numbers from 1-3");
-                System.out.println("Please choose a word category: \n" +
-                        "1. Random Words (hard) \n" +
-                        "2. Country \n" +
-                        "3. Animals");
-                userChoice = scanner.nextInt();
                 break;
         }
        } while (checkLogic);
