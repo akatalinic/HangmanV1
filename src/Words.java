@@ -76,8 +76,9 @@ public class Words {
     }
 
     public String pickAWord (String userChoice){
-        boolean checkLogic = true;
         Scanner scanner = new Scanner(System.in);
+        PlayerMenu menu = new PlayerMenu();
+        boolean checkLogic = true;;
         int wordsLength;
         boolean isWordFound = false;
 
@@ -93,6 +94,8 @@ public class Words {
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
                     wordsLength = scanner.nextInt();
+                    scanner.nextLine();
+
                     while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
@@ -101,7 +104,6 @@ public class Words {
 
                     for (String word : getRandomWords()) {
                         if (wordsLength == word.length()) {
-
 
                             String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
 
@@ -117,7 +119,6 @@ public class Words {
                     }
                     if (!isWordFound) {
                         System.out.println("There is no word with that amount of letters");
-                        break;
                     }
                     break;
 
@@ -131,6 +132,7 @@ public class Words {
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
                     wordsLength = scanner.nextInt();
+                    scanner.nextLine();
                     while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
@@ -151,10 +153,8 @@ public class Words {
                             break;
                         }
                     }
-
                     if(!isWordFound){
                         System.out.println("There is no word with that amount of letters");
-                        break;
                     }
                     break;
 
@@ -168,6 +168,7 @@ public class Words {
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
                     wordsLength = scanner.nextInt();
+                    scanner.nextLine();
 
                     while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
