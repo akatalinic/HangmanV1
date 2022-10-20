@@ -117,7 +117,7 @@ public class Words {
                         }
                     }
                     if (!isWordFound) {
-                        System.out.println("There is no word with that amount of letters");
+                        System.out.println("There is no word with that amount of letters!");
                     }
                     break;
 
