@@ -78,7 +78,7 @@ public class Words {
         Scanner scanner = new Scanner(System.in);
         PlayerMenu menu = new PlayerMenu();
         boolean checkLogic = true;;
-        int wordsLength;
+        String wordsLength = " ";
         boolean isWordFound = false;
 
         do {
@@ -92,21 +92,24 @@ public class Words {
 
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
-                    wordsLength = scanner.nextInt();
-                    scanner.nextLine();
+                    wordsLength = scanner.nextLine();
 
-                    while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
+                    while (!wordsLength.matches("[0-9]*")){
+                        System.out.println("Please enter a valid number: ");
+                        wordsLength = scanner.nextLine();
+                    }
+                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
-                        wordsLength = scanner.nextInt();
+                        wordsLength = scanner.nextLine();
                     }
 
                     for (String word : getRandomWords()) {
-                        if (wordsLength == word.length()) {
+                        if (Integer.parseInt(wordsLength) == word.length()) {
 
                             String generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
 
-                            while (generateWord.length() != wordsLength) {
+                            while (generateWord.length() != Integer.parseInt(wordsLength)) {
                                 generateWord = randomWords[(int) (Math.random() * (randomWords.length))];
                             }
 
@@ -130,20 +133,25 @@ public class Words {
 
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
-                    wordsLength = scanner.nextInt();
-                    scanner.nextLine();
-                    while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
+                    wordsLength = scanner.nextLine();
+
+                    while (!wordsLength.matches("[0-9]*")){
+                        System.out.println("Please enter a valid number: ");
+                        wordsLength = scanner.nextLine();
+                    }
+
+                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
-                        wordsLength = scanner.nextInt();
+                        wordsLength = scanner.nextLine();
                     }
 
                     for (String word : getRandomCountry()) {
-                        if (wordsLength == word.length()) {
+                        if (Integer.parseInt(wordsLength) == word.length()) {
 
                             String generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
 
-                            while (generateWordCountry.length() != wordsLength) {
+                            while (generateWordCountry.length() != Integer.parseInt(wordsLength)) {
                                 generateWordCountry = randomCountry[(int) (Math.random() * (randomCountry.length))];
                             }
                             setRandomGeneratedWord(generateWordCountry);
@@ -166,21 +174,25 @@ public class Words {
 
                     System.out.print("Please choose a number of letters you wish for your word to have: ");
 
-                    wordsLength = scanner.nextInt();
-                    scanner.nextLine();
+                    wordsLength = scanner.nextLine();
 
-                    while (wordsLength < getMinLength() || wordsLength > getMaxLength()){
+                    while (!wordsLength.matches("[0-9]*")){
+                        System.out.println("Please enter a valid number: ");
+                        wordsLength = scanner.nextLine();
+                    }
+
+                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
                         System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
                                 + maxLength);
-                        wordsLength = scanner.nextInt();
+                        wordsLength = scanner.nextLine();
 
                     }
 
                     for (String word : getAnimals()){
-                        if(wordsLength == word.length()){
+                        if(Integer.parseInt(wordsLength) == word.length()){
                             String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
 
-                            while (generateWordAnimal.length() != wordsLength) {
+                            while (generateWordAnimal.length() != Integer.parseInt(wordsLength)) {
                                 generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
                             }
                             setRandomGeneratedWord(generateWordAnimal);
