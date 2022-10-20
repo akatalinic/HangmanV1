@@ -240,7 +240,7 @@ public class Game {
 
                         System.out.print("------------| \n" +
                                 " |       <(ಠ_ಠ)> \n" +
-                                " |          |  \n" +
+                                " |          |   \n" +
                                 " |            \n" +
                                 " |            \n" +
                                 "_|_           \n");
@@ -305,7 +305,7 @@ public class Game {
                         System.out.print("------------| \n" +
                                 " |       <(ಠ_ಠ)> \n" +
                                 " |          |  \n" +
-                                " |          |  \n" +
+                                " |          |   \n" +
                                 " |            \n" +
                                 "_|_           \n");
 
