@@ -56,6 +56,8 @@ public class Game {
 
     public void gameOn(String word) {
         Scanner scanner = new Scanner(System.in);
+        String [] alphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+
         setRandomWord(word);
 
         String userLetter;
@@ -96,6 +98,12 @@ public class Game {
 
             userLetter = userLetter.toLowerCase();
 
+            for(int i = 0; i < alphabet.length; i++){
+                if(userLetter.equals(alphabet[i])){
+                    alphabet[i]= " ";
+                }
+            }
+
             if (guessedLetters.contains(userLetter.charAt(0))) {
                 System.out.println("You already inputted that letter!");
             } else {
@@ -120,6 +128,8 @@ public class Game {
             if ( getCounterCorrect() < word.length() && getCounterWrong() < maxGuess){
                 System.out.print("You inputted following letters: ");
                 System.out.println(guessedLetters.toString().replace("[", "").replace("]", ""));
+                System.out.print("You didnt use following letters: ");
+                System.out.println(Arrays.toString(alphabet).replace(",","").replace("[","").replace("]","").toUpperCase());
             }
         } while (getCounterCorrect() < word.length() && getCounterWrong() < maxGuess);
     }

@@ -23,6 +23,8 @@ public class Words {
     private int maxLength;
     private int minLength;
 
+
+
     public int getMaxLength() {
         return maxLength;
     }
@@ -77,6 +79,7 @@ public class Words {
         boolean checkLogic = true;
         Scanner scanner = new Scanner(System.in);
         int wordsLength;
+        boolean isWordFound = false;
 
         do {
             switch (userChoice){
@@ -96,7 +99,6 @@ public class Words {
                         wordsLength = scanner.nextInt();
                     }
 
-
                     for (String word : getRandomWords()) {
                         if (wordsLength == word.length()) {
 
@@ -109,10 +111,15 @@ public class Words {
 
                             setRandomGeneratedWord(generateWord);
                             checkLogic = false;
+                            isWordFound = true;
                             break;
                         }
                     }
-                    System.out.println("There is no word with that amount of letters");
+                    if (!isWordFound) {
+                        System.out.println("There is no word with that amount of letters");
+                        break;
+                    }
+                    break;
 
                 case "2":
 
@@ -140,10 +147,16 @@ public class Words {
                             }
                             setRandomGeneratedWord(generateWordCountry);
                             checkLogic = false;
+                            isWordFound = true;
                             break;
                         }
                     }
-                    System.out.println("There is no word with that amount of letters");
+
+                    if(!isWordFound){
+                        System.out.println("There is no word with that amount of letters");
+                        break;
+                    }
+                    break;
 
                 case "3":
 
@@ -165,20 +178,24 @@ public class Words {
 
                     for (String word : getAnimals()){
                         if(wordsLength == word.length()){
-
                             String generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
 
                             while (generateWordAnimal.length() != wordsLength) {
                                 generateWordAnimal = animals[(int) (Math.random() * (animals.length))];
                             }
-
-                    setRandomGeneratedWord(generateWordAnimal);
-                    checkLogic = false;
-                    break;
+                            setRandomGeneratedWord(generateWordAnimal);
+                            checkLogic = false;
+                            isWordFound = true;
+                            break;
                         }
                     }
-                    System.out.println("There is no word with that amount of letters");
+                    if(!isWordFound){
+                        System.out.println("There is no word with that amount of letters");
+                        break;
+                    }
+                    break;
             }
+
         } while (checkLogic);
         return getRandomGeneratedWord();
     }
