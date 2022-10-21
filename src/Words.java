@@ -77,8 +77,8 @@ public class Words {
     public String pickAWord (String userChoice){
         Scanner scanner = new Scanner(System.in);
         PlayerMenu menu = new PlayerMenu();
-        boolean checkLogic = true;;
-        String wordsLength = " ";
+        boolean checkLogic = true;
+        String wordsLength;
         boolean isWordFound = false;
 
         do {
