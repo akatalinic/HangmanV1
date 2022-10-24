@@ -157,323 +157,52 @@ public class Game {
             switch(getCounterWrong()){
 
                 case 1:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase1();
 
                     break;
 
                 case 2:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHangmaneCase2_other();
 
                     break;
 
                 case 3:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |          |   \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHangmanCase3_other();
 
                     break;
 
                 case 4:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |          |  \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase2();
 
                     break;
 
                 case 5:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |          |  \n" +
-                                " |          |   \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHangmanCase5_other();
 
                     break;
 
                 case 6:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |         /|  \n" +
-                                " |          | \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase3();
 
                     break;
 
                 case 7:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(•︵•)> \n" +
-                                " |         /|\\  \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHagmanCase4();
 
                     break;
 
                 case 8:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |      °՞(-ᗣ-)՞° \n" +
-                                " |         /|\\   \n" +
-                                " |          | \n" +
-                                " |         /  \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println("The end draws near !");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHangmanCase5();
 
                     break;
 
                 case 9:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(x_x)> \n" +
-                                " |         /|\\  \n" +
-                                " |          |  \n" +
-                                " |         / \\ \n" +
-                                "_|_           \n");
-
-                        System.out.println("You have been hanged !");
-                        System.out.print("The word was: " + randomWord);
-                    }
+                    printHangmancase6();
 
                     break;
 
                 default:
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------|\n" +
-                                " | \n" +
-                                " | \n" +
-                                " | \n" +
-                                " | \n" +
-                                "_|_ \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    }
+                    printHangmanDefault();
                     break;
             }
         }else{
@@ -482,237 +211,248 @@ public class Game {
 
                 case 1:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase1();
                     break;
 
                 case 2:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
 
-                        System.out.print(" Thanks for saving me \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |          | \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase2();
                     break;
 
                 case 3:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(ಠ_ಠ)> \n" +
-                                " |         /|  \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    hangmanPrintCase3();
                     break;
 
                 case 4:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(•︵•)> \n" +
-                                " |         /|\\  \n" +
-                                " |          |  \n" +
-                                " |            \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-
-                    }
+                    printHagmanCase4();
                     break;
 
                 case 5:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |      °՞(-ᗣ-)՞° \n" +
-                                " |         /|\\  \n" +
-                                " |          |  \n" +
-                                " |         /  \n" +
-                                "_|_           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println("The end draws near !");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-                    }
+                    printHangmanCase5();
                     break;
 
                 case 6:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------| \n" +
-                                " |       <(x_x)> \n" +
-                                " |         /|\\  \n" +
-                                " |          |  \n" +
-                                " |         / \\ \n" +
-                                "_|_           \n");
-
-                        System.out.println("You have been hanged !");
-                        System.out.print("The word was: " + randomWord);
-                    }
+                    printHangmancase6();
                     break;
 
                 default:
 
-                    if (getCounterCorrect() == randomWord.length()) {
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-                        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
-                        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
-
-                        System.out.print(" Thanks for saving me! \n" +
-                                "        ヽ(´▽`)ノ \n" +
-                                "           | | \n" +
-                                "           |_| \n" +
-                                "         _/   \\_ \n" +
-                                "           \n");
-
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    } else {
-
-                        System.out.print("------------|\n" +
-                                " | \n" +
-                                " | \n" +
-                                " | \n" +
-                                " | \n" +
-                                "_|_ \n");
-                        System.out.println("• Guess the word •");
-                        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
-                                .replace("]", ""));
-
-                    }
+                    printHangmanDefault();
                     break;
             }
+        }
+    }
+
+    private void printHangmanCase5_other() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |          |  \n" +
+                    " |          |   \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void printHangmanCase3_other() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |          |   \n" +
+                    " |            \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void printHangmaneCase2_other() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |          |  \n" +
+                    " |            \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void printHangmanDefault() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+        } else {
+
+            System.out.print("------------|\n" +
+                    " | \n" +
+                    " | \n" +
+                    " | \n" +
+                    " | \n" +
+                    "_|_ \n");
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+
+        }
+    }
+
+    private void printHangmancase6() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(x_x)> \n" +
+                    " |         /|\\  \n" +
+                    " |          |  \n" +
+                    " |         / \\ \n" +
+                    "_|_           \n");
+
+            System.out.println("You have been hanged !");
+            System.out.print("The word was: " + randomWord);
+        }
+    }
+
+    private void printWinState() {
+        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
+        System.out.println("🎊 YOU HAVE WON THE GAME!🎊");
+        System.out.println("🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊");
+
+        System.out.print(" Thanks for saving me! \n" +
+                "        ヽ(´▽`)ノ \n" +
+                "           | | \n" +
+                "           |_| \n" +
+                "         _/   \\_ \n" +
+                "           \n");
+
+        System.out.println("• Guess the word •");
+        System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                .replace("]", ""));
+    }
+
+    private void printHangmanCase5() {
+        if (getCounterCorrect() == randomWord.length()) {
+
+            printWinState();
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |      °՞(-ᗣ-)՞° \n" +
+                    " |         /|\\  \n" +
+                    " |          |  \n" +
+                    " |         /  \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println("The end draws near !");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void printHagmanCase4() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(•︵•)> \n" +
+                    " |         /|\\  \n" +
+                    " |          |  \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+
+
+        }
+    }
+
+    private void hangmanPrintCase3() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |         /|  \n" +
+                    " |          |  \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void hangmanPrintCase2() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |          | \n" +
+                    " |          |  \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
+        }
+    }
+
+    private void hangmanPrintCase1() {
+        if (getCounterCorrect() == randomWord.length()) {
+            printWinState();
+        } else {
+
+            System.out.print("------------| \n" +
+                    " |       <(ಠ_ಠ)> \n" +
+                    " |            \n" +
+                    " |            \n" +
+                    " |            \n" +
+                    "_|_           \n");
+
+            System.out.println("• Guess the word •");
+            System.out.println(Arrays.toString(getRandomWordToChar()).replace(",", "").replace("[", "")
+                    .replace("]", ""));
         }
     }
 }
