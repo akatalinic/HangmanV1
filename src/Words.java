@@ -87,22 +87,7 @@ public class Words {
                 case "1":
 
                     randomWordsLength();
-                    System.out.println("The words in this category have minimum of " + getMinLength() + " letters," +
-                            "and maximum of " + getMaxLength() + " letters");
-
-                    System.out.print("Please choose a number of letters you wish for your word to have: ");
-
-                    wordsLength = scanner.nextLine();
-
-                    while (!wordsLength.matches("[0-9]*")){
-                        System.out.println("Please enter a valid number: ");
-                        wordsLength = scanner.nextLine();
-                    }
-                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
-                        System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
-                                + maxLength);
-                        wordsLength = scanner.nextLine();
-                    }
+                    wordsLength = choseNumOfLetters(scanner);
 
                     for (String word : getRandomWords()) {
                         if (Integer.parseInt(wordsLength) == word.length()) {
@@ -127,24 +112,7 @@ public class Words {
                 case "2":
 
                     countryWordsLength();
-
-                    System.out.println("The words in this category have minimum of " + getMinLength() + " letters," +
-                            "and maximum of " + getMaxLength() + " letters");
-
-                    System.out.print("Please choose a number of letters you wish for your word to have: ");
-
-                    wordsLength = scanner.nextLine();
-
-                    while (!wordsLength.matches("[0-9]*")){
-                        System.out.println("Please enter a valid number: ");
-                        wordsLength = scanner.nextLine();
-                    }
-
-                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
-                        System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
-                                + maxLength);
-                        wordsLength = scanner.nextLine();
-                    }
+                    wordsLength = choseNumOfLetters(scanner);
 
                     for (String word : getRandomCountry()) {
                         if (Integer.parseInt(wordsLength) == word.length()) {
@@ -168,25 +136,7 @@ public class Words {
                 case "3":
 
                     animalWordsLength();
-
-                    System.out.println("The words in this category have minimum of " + getMinLength() + " letters," +
-                            "and maximum of " + getMaxLength() + " letters");
-
-                    System.out.print("Please choose a number of letters you wish for your word to have: ");
-
-                    wordsLength = scanner.nextLine();
-
-                    while (!wordsLength.matches("[0-9]*")){
-                        System.out.println("Please enter a valid number: ");
-                        wordsLength = scanner.nextLine();
-                    }
-
-                    while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
-                        System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
-                                + maxLength);
-                        wordsLength = scanner.nextLine();
-
-                    }
+                    wordsLength = choseNumOfLetters(scanner);
 
                     for (String word : getAnimals()){
                         if(Integer.parseInt(wordsLength) == word.length()){
@@ -212,48 +162,46 @@ public class Words {
         return getRandomGeneratedWord();
     }
 
+    private String choseNumOfLetters(Scanner scanner) {
+        String wordsLength;
+        System.out.println("The words in this category have minimum of " + getMinLength() + " letters," +
+                "and maximum of " + getMaxLength() + " letters");
+
+        System.out.print("Please choose a number of letters you wish for your word to have: ");
+
+        wordsLength = scanner.nextLine();
+
+        while (!wordsLength.matches("[0-9]*")){
+            System.out.println("Please enter a valid number: ");
+            wordsLength = scanner.nextLine();
+        }
+        while (Integer.parseInt(wordsLength) < getMinLength() || Integer.parseInt(wordsLength) > getMaxLength()){
+            System.out.println("You entered wrong number, please enter number in range of: " + minLength +"-"
+                    + maxLength);
+            wordsLength = scanner.nextLine();
+        }
+        return wordsLength;
+    }
+
     public void randomWordsLength (){
 
         String[] lengthOfWords = getRandomWords();
-
-        int maxLength = Integer.MIN_VALUE;
-        int minLength = Integer.MAX_VALUE;
-
-        for (String word : lengthOfWords){
-            if (word.length() > maxLength){
-                maxLength = word.length();
-            }
-            if (word.length()< minLength){
-                minLength = word.length();
-            }
-        }
-        setMaxLength(maxLength);
-        setMinLength(minLength);
+        checkLenghtofWords(lengthOfWords);
     }
 
     public void animalWordsLength (){
 
         String[] lengthOfWords = getAnimals();
-
-        int maxLength = Integer.MIN_VALUE;
-        int minLength = Integer.MAX_VALUE;
-
-        for (String word : lengthOfWords){
-            if (word.length() > maxLength){
-                maxLength = word.length();
-            }
-            if (word.length()< minLength){
-                minLength = word.length();
-            }
-        }
-        setMaxLength(maxLength);
-        setMinLength(minLength);
+        checkLenghtofWords(lengthOfWords);
     }
 
     public void countryWordsLength (){
 
         String[] lengthOfWords = getRandomCountry();
+        checkLenghtofWords(lengthOfWords);
+    }
 
+    private void checkLenghtofWords(String[] lengthOfWords) {
         int maxLength = Integer.MIN_VALUE;
         int minLength = Integer.MAX_VALUE;
 

@@ -17,26 +17,32 @@ public class PlayerMenu {
         Scanner scanner = new Scanner(System.in);
         String userChoice;
 
+        userChoice = printMenu(scanner);
+        userChoice = validateScanner(scanner, userChoice);
+
+        newWords.pickAWord(userChoice);
+        setRandomGeneratedWord(newWords.getRandomGeneratedWord());
+
+        return  getRandomGeneratedWord();
+    }
+
+    private static String validateScanner(Scanner scanner, String userChoice) {
+        while(!userChoice.matches("[1-3]")){
+            System.out.println("Wrong input, try again");
+            userChoice = printMenu(scanner);
+        }
+        return userChoice;
+    }
+
+    private static String printMenu(Scanner scanner) {
+        String userChoice;
         System.out.println("Please choose a word category: \n" +
                 "1. Random Words (HARD) \n" +
                 "2. Country \n" +
                 "3. Animals");
 
         userChoice = scanner.nextLine();
-
-        while(!userChoice.matches("[1-3]")){
-            System.out.println("Wrong input, try again");
-            System.out.println("Please choose a word category: \n" +
-                    "1. Random Words (hard) \n" +
-                    "2. Country \n" +
-                    "3. Animals");
-            userChoice = scanner.nextLine();
-        }
-        newWords.pickAWord(userChoice);
-
-        setRandomGeneratedWord(newWords.getRandomGeneratedWord());
-
-        return  getRandomGeneratedWord();
+        return userChoice;
     }
 
 }
